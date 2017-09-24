@@ -12,10 +12,15 @@ import RxCocoa
 
 class MainViewController: UIViewController {
 
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet private weak var tableView: UITableView!
+
+    fileprivate var topics = [String]()
+    fileprivate var shownTopics = ["UITable", "UISearchBar", "UISlider", "UISwtch"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        tableView.dataSource = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -23,5 +28,25 @@ class MainViewController: UIViewController {
     }
 
 }
+
+extension MainViewController: UITableViewDataSource {
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "topic", for: indexPath)
+        cell.textLabel?.text = shownTopics[indexPath.row]
+
+        return cell
+    }
+
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return shownTopics.count
+    }
+
+}
+
 
 
