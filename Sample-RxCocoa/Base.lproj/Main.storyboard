@@ -49,5 +49,65 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
+        <!--TableViewController-->
+        <scene sceneID="RyL-Ky-716">
+            <objects>
+                <viewController storyboardIdentifier="TableViewController" id="tm5-ER-cqh" userLabel="TableViewController" customClass="TableViewController" customModule="Sample_RxCocoa" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tzp-6t-InP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="Kg0-DP-Wht"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g1t-cW-CUf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1486" y="-135"/>
+        </scene>
+        <!--Switch View Controller-->
+        <scene sceneID="n2d-Br-3OO">
+            <objects>
+                <viewController storyboardIdentifier="SwitchViewController" id="K5g-9W-lqw" customClass="SwitchViewController" customModule="Sample_RxCocoa" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="u0r-73-XfR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="HiZ-LL-NVs"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HDk-Hk-rJk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2346" y="-135"/>
+        </scene>
+        <!--Slider View Controller-->
+        <scene sceneID="eRb-Kf-r1y">
+            <objects>
+                <viewController storyboardIdentifier="SliderViewController" id="oF9-pT-dcf" customClass="SliderViewController" customModule="Sample_RxCocoa" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lVT-EM-A9W">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="cKF-Yb-vxP"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Iu-Lt-b4B" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1486" y="640"/>
+        </scene>
+        <!--Search Bar View Controller-->
+        <scene sceneID="kC4-Kj-doH">
+            <objects>
+                <viewController storyboardIdentifier="SearchBarViewController" id="IWc-sq-GYI" customClass="SearchBarViewController" customModule="Sample_RxCocoa" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="89u-We-1n3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="Dvo-wy-qaT"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PqG-f1-gPh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2354" y="640"/>
+        </scene>
     </scenes>
 </document>

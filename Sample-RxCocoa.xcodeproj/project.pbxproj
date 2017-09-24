@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		1779FE2FBB7D139A350F39D4 /* Pods_Sample_RxCocoaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA30A3734D7BA2E62672E828 /* Pods_Sample_RxCocoaTests.framework */; };
 		6AB3CF4DEEAC31612CB56428 /* Pods_Sample_RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63FB096D590F2B2E67A4F5FA /* Pods_Sample_RxCocoa.framework */; };
+		E1AF0DC61F781F1800A3BCCB /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AF0DC51F781F1800A3BCCB /* TableViewController.swift */; };
+		E1AF0DC81F7820C700A3BCCB /* SwitchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AF0DC71F7820C700A3BCCB /* SwitchViewController.swift */; };
+		E1AF0DCA1F78211B00A3BCCB /* SearchBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AF0DC91F78211B00A3BCCB /* SearchBarViewController.swift */; };
+		E1AF0DCC1F78223600A3BCCB /* SliderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AF0DCB1F78223600A3BCCB /* SliderViewController.swift */; };
 		E1AF32191F778E2400DFE0C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AF32181F778E2400DFE0C2 /* AppDelegate.swift */; };
 		E1AF321B1F778E2400DFE0C2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AF321A1F778E2400DFE0C2 /* MainViewController.swift */; };
 		E1AF321E1F778E2400DFE0C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1AF321C1F778E2400DFE0C2 /* Main.storyboard */; };
@@ -33,6 +37,10 @@
 		68E465D4DA625A56465950E5 /* Pods-Sample-RxCocoaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sample-RxCocoaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sample-RxCocoaTests/Pods-Sample-RxCocoaTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B500823B2FD9FFBB9D245210 /* Pods-Sample-RxCocoa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sample-RxCocoa.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sample-RxCocoa/Pods-Sample-RxCocoa.release.xcconfig"; sourceTree = "<group>"; };
 		D1F5F1B66E0BB05F48BDB120 /* Pods-Sample-RxCocoaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sample-RxCocoaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sample-RxCocoaTests/Pods-Sample-RxCocoaTests.release.xcconfig"; sourceTree = "<group>"; };
+		E1AF0DC51F781F1800A3BCCB /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		E1AF0DC71F7820C700A3BCCB /* SwitchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchViewController.swift; sourceTree = "<group>"; };
+		E1AF0DC91F78211B00A3BCCB /* SearchBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarViewController.swift; sourceTree = "<group>"; };
+		E1AF0DCB1F78223600A3BCCB /* SliderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderViewController.swift; sourceTree = "<group>"; };
 		E1AF32151F778E2400DFE0C2 /* Sample-RxCocoa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sample-RxCocoa.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1AF32181F778E2400DFE0C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1AF321A1F778E2400DFE0C2 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +110,10 @@
 			children = (
 				E1AF32181F778E2400DFE0C2 /* AppDelegate.swift */,
 				E1AF321A1F778E2400DFE0C2 /* MainViewController.swift */,
+				E1AF0DC51F781F1800A3BCCB /* TableViewController.swift */,
+				E1AF0DC71F7820C700A3BCCB /* SwitchViewController.swift */,
+				E1AF0DC91F78211B00A3BCCB /* SearchBarViewController.swift */,
+				E1AF0DCB1F78223600A3BCCB /* SliderViewController.swift */,
 				E1AF321C1F778E2400DFE0C2 /* Main.storyboard */,
 				E1AF321F1F778E2400DFE0C2 /* Assets.xcassets */,
 				E1AF32211F778E2400DFE0C2 /* LaunchScreen.storyboard */,
@@ -356,6 +368,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1AF321B1F778E2400DFE0C2 /* MainViewController.swift in Sources */,
+				E1AF0DCA1F78211B00A3BCCB /* SearchBarViewController.swift in Sources */,
+				E1AF0DC61F781F1800A3BCCB /* TableViewController.swift in Sources */,
+				E1AF0DCC1F78223600A3BCCB /* SliderViewController.swift in Sources */,
+				E1AF0DC81F7820C700A3BCCB /* SwitchViewController.swift in Sources */,
 				E1AF32191F778E2400DFE0C2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
