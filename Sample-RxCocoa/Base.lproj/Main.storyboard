@@ -139,13 +139,46 @@
                     <view key="view" contentMode="scaleToFill" id="89u-We-1n3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="JhP-CG-N2p">
+                                <rect key="frame" x="0.0" y="20" width="375" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nHH-M9-vhL">
+                                <rect key="frame" x="0.0" y="76" width="375" height="591"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="30" id="5wb-PG-fZ5">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="30"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5wb-PG-fZ5" id="Zjs-jZ-Ojy">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="29.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="nHH-M9-vhL" firstAttribute="leading" secondItem="Dvo-wy-qaT" secondAttribute="leading" id="2zf-3L-bKW"/>
+                            <constraint firstItem="Dvo-wy-qaT" firstAttribute="trailing" secondItem="nHH-M9-vhL" secondAttribute="trailing" id="HoA-J5-Sx7"/>
+                            <constraint firstItem="Dvo-wy-qaT" firstAttribute="bottom" secondItem="nHH-M9-vhL" secondAttribute="bottom" id="Xjz-sn-M8g"/>
+                            <constraint firstItem="Dvo-wy-qaT" firstAttribute="trailing" secondItem="JhP-CG-N2p" secondAttribute="trailing" id="dqO-w5-gbf"/>
+                            <constraint firstItem="JhP-CG-N2p" firstAttribute="top" secondItem="Dvo-wy-qaT" secondAttribute="top" id="qBO-5m-1UN"/>
+                            <constraint firstItem="nHH-M9-vhL" firstAttribute="top" secondItem="JhP-CG-N2p" secondAttribute="bottom" id="scX-7V-cHw"/>
+                            <constraint firstItem="JhP-CG-N2p" firstAttribute="leading" secondItem="Dvo-wy-qaT" secondAttribute="leading" id="wOm-BZ-BRY"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Dvo-wy-qaT"/>
                     </view>
+                    <connections>
+                        <outlet property="searchBar" destination="JhP-CG-N2p" id="XdT-dL-hNN"/>
+                        <outlet property="tableView" destination="nHH-M9-vhL" id="6CZ-Rh-iTc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PqG-f1-gPh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2354" y="640"/>
+            <point key="canvasLocation" x="2352.8000000000002" y="639.13043478260875"/>
         </scene>
     </scenes>
 </document>
