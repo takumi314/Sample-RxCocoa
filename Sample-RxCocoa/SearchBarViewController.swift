@@ -32,6 +32,7 @@ class SearchBarViewController: UIViewController {
             .orEmpty
             .debounce(0.5, scheduler: MainScheduler.instance)
             .distinctUntilChanged()
+            .filter({ !$0.isEmpty })
             .subscribe({ [unowned self] (query) in
                 self.shownItems = self.allCities.filter({ $0.hasPrefix(query.element!) })
                 self.tableView.reloadData()
