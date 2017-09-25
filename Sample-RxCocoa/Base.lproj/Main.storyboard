@@ -135,13 +135,14 @@
         <!--Text Field View Controller-->
         <scene sceneID="RdG-Ke-2qJ">
             <objects>
-                <viewController id="kba-Ya-voF" customClass="TextFieldViewController" customModule="Sample_RxCocoa" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TextFieldViewController" id="kba-Ya-voF" customClass="TextFieldViewController" customModule="Sample_RxCocoa" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NkF-0V-GyM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Qg-Vw-00t">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="7Qg-Vw-00t">
                                 <rect key="frame" x="30" y="318.5" width="315" height="30"/>
+                                <color key="backgroundColor" red="0.13372110567643533" green="0.16213113493711484" blue="0.87045923223350252" alpha="0.063275898972602745" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
