@@ -19,6 +19,7 @@ class MainViewController: UIViewController {
                                    SearchBarViewController.identifier(),
                                    SliderViewController.identifier(),
                                    CollectionViewController.identifier()]
+                                   TextFieldViewController.identifier()]
     fileprivate let disposeBag = DisposeBag()
 
     override func viewDidLoad() {
