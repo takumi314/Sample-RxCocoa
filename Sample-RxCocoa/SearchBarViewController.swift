@@ -7,22 +7,34 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class SearchBarViewController: UIViewController {
 
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
 
-    var items = [String]()
-    var shownItems = ["London", "Paris", "Berlin", "Rome", "Madrid", "Bern"]
+    let disposeBug = DisposeBag()
+    let allCities = ["London", "Paris", "Berlin", "Rome", "Madrid", "Bern"]
 
+    var shownItems = [String]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupRx()
+        tableView.dataSource = self
     }
 
-    func setup() -> Void {
-
+    func setupRx() -> Void {
+        searchBar.rx
+            .text
+            .orEmpty
+            .subscribe({ [unowned self] (query) in
+                self.shownItems = self.allCities.filter({ $0.hasPrefix(query.element!) })
+                self.tableView.reloadData()
+            })
+            .addDisposableTo(disposeBug)
     }
     
 }
@@ -43,6 +55,5 @@ extension SearchBarViewController: UITableViewDataSource {
 
         return cell
     }
-
 
 }
