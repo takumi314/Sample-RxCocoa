@@ -17,7 +17,8 @@ class MainViewController: UIViewController {
     fileprivate var shownTopics = [TableViewController.identifier(),
                                    SwitchViewController.identifier(),
                                    SearchBarViewController.identifier(),
-                                   SliderViewController.identifier()]
+                                   SliderViewController.identifier(),
+                                   CollectionViewController.identifier()]
     fileprivate let disposeBag = DisposeBag()
 
     override func viewDidLoad() {

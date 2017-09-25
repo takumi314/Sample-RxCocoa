@@ -19,6 +19,7 @@
 		E1AF32201F778E2400DFE0C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1AF321F1F778E2400DFE0C2 /* Assets.xcassets */; };
 		E1AF32231F778E2400DFE0C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1AF32211F778E2400DFE0C2 /* LaunchScreen.storyboard */; };
 		E1AF322E1F778E2500DFE0C2 /* Sample_RxCocoaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AF322D1F778E2500DFE0C2 /* Sample_RxCocoaTests.swift */; };
+		E1E6467E1F7935D500C0D64A /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E6467D1F7935D500C0D64A /* CollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		E1AF32291F778E2500DFE0C2 /* Sample-RxCocoaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Sample-RxCocoaTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1AF322D1F778E2500DFE0C2 /* Sample_RxCocoaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sample_RxCocoaTests.swift; sourceTree = "<group>"; };
 		E1AF322F1F778E2500DFE0C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E1E6467D1F7935D500C0D64A /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		FA30A3734D7BA2E62672E828 /* Pods_Sample_RxCocoaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sample_RxCocoaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -114,6 +116,7 @@
 				E1AF0DC71F7820C700A3BCCB /* SwitchViewController.swift */,
 				E1AF0DC91F78211B00A3BCCB /* SearchBarViewController.swift */,
 				E1AF0DCB1F78223600A3BCCB /* SliderViewController.swift */,
+				E1E6467D1F7935D500C0D64A /* CollectionViewController.swift */,
 				E1AF321C1F778E2400DFE0C2 /* Main.storyboard */,
 				E1AF321F1F778E2400DFE0C2 /* Assets.xcassets */,
 				E1AF32211F778E2400DFE0C2 /* LaunchScreen.storyboard */,
@@ -343,7 +346,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
+			shellScript = "";
 		};
 		F7DD08109BF9C6CF61631F2E /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -371,6 +374,7 @@
 				E1AF0DCA1F78211B00A3BCCB /* SearchBarViewController.swift in Sources */,
 				E1AF0DC61F781F1800A3BCCB /* TableViewController.swift in Sources */,
 				E1AF0DCC1F78223600A3BCCB /* SliderViewController.swift in Sources */,
+				E1E6467E1F7935D500C0D64A /* CollectionViewController.swift in Sources */,
 				E1AF0DC81F7820C700A3BCCB /* SwitchViewController.swift in Sources */,
 				E1AF32191F778E2400DFE0C2 /* AppDelegate.swift in Sources */,
 			);
