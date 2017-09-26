@@ -16,7 +16,17 @@ class SliderViewController: UIViewController {
     @IBOutlet weak var stepper: UIStepper!
     @IBOutlet weak var label: UILabel!
 
+    let max: Float = 100.0
+    let min: Float = 0.0
     let disposeBug = DisposeBag()
+
+    var currentValue: Float = 50 {
+        didSet {
+            self.label.text = String(Int(currentValue))
+            self.slider.value = currentValue
+            self.stepper.value = Double(currentValue)
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +39,11 @@ class SliderViewController: UIViewController {
         slider.minimumValue = 0
         slider.value = 50
         slider.minimumTrackTintColor = .blue
+
+        stepper.value = 50
+        stepper.stepValue = 1
+        stepper.maximumValue = Double(max)
+        stepper.minimumValue = Double(min)
     }
 
     func setupRx() -> Void {
@@ -39,6 +54,13 @@ class SliderViewController: UIViewController {
             }
             .subscribe { [unowned self] value in
                 self.label.text = Int(value.element!).description
+        stepper.rx
+            .value
+            .filter { [unowned self] x in
+                self.min <= Float(x) || Float(x) <= self.max
+            }
+            .subscribe { [weak self] value in
+                self?.currentValue = Float(value.element!)
             }
             .addDisposableTo(disposeBug)
     }
