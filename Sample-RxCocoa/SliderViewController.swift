@@ -13,6 +13,7 @@ import RxCocoa
 class SliderViewController: UIViewController {
 
     @IBOutlet weak var slider: UISlider!
+    @IBOutlet weak var stepper: UIStepper!
     @IBOutlet weak var label: UILabel!
 
     let disposeBug = DisposeBag()
