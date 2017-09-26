@@ -35,8 +35,8 @@ class SliderViewController: UIViewController {
     }
 
     func setupUI() -> Void {
-        slider.maximumValue = 100
-        slider.minimumValue = 0
+        slider.maximumValue = max
+        slider.minimumValue = min
         slider.value = 50
         slider.minimumTrackTintColor = .blue
 
@@ -53,7 +53,10 @@ class SliderViewController: UIViewController {
                 return abs($0 - $1) < 1
             }
             .subscribe { [unowned self] value in
-                self.label.text = Int(value.element!).description
+                self.currentValue = value.element!
+            }
+            .addDisposableTo(disposeBug)
+
         stepper.rx
             .value
             .filter { [unowned self] x in
