@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class SliderViewController: UIViewController {
 
@@ -23,5 +25,9 @@ class SliderViewController: UIViewController {
         slider.minimumValue = 0
         slider.isContinuous = true
     }
-    
+
+    func setupRx() -> Void {
+        
+    }
+
 }
