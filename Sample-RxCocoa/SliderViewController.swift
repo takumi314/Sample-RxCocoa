@@ -9,5 +9,19 @@
 import UIKit
 
 class SliderViewController: UIViewController {
+
+    @IBOutlet weak var slider: UISlider!
+    @IBOutlet weak var label: UILabel!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupUI()
+    }
+
+    func setupUI() -> Void {
+        slider.maximumValue = 100
+        slider.minimumValue = 0
+        slider.isContinuous = true
+    }
     
 }
