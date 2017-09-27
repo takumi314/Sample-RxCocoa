@@ -12,18 +12,20 @@ import RxCocoa
 
 class MainViewController: UIViewController {
 
-    fileprivate var tableView: UITableView?
-    fileprivate var topics = [String]()
-    fileprivate var shownTopics = [TableViewController.identifier(),
+    fileprivate let shownTopics = [TableViewController.identifier(),
                                    SwitchViewController.identifier(),
                                    SearchBarViewController.identifier(),
                                    SliderViewController.identifier(),
-                                   CollectionViewController.identifier()]
+                                   CollectionViewController.identifier(),
                                    TextFieldViewController.identifier()]
     fileprivate let disposeBag = DisposeBag()
 
+    fileprivate var tableView: UITableView?
+    fileprivate var topics = [String]()
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "MainViewController"
     }
 
     override func viewWillAppear(_ animated: Bool) {
