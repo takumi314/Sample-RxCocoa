@@ -56,19 +56,91 @@
             <point key="canvasLocation" x="1486" y="-135"/>
         </scene>
         <!--Switch View Controller-->
-        <scene sceneID="n2d-Br-3OO">
+        <scene sceneID="Xer-qB-HDe">
             <objects>
-                <viewController storyboardIdentifier="SwitchViewController" id="K5g-9W-lqw" customClass="SwitchViewController" customModule="Sample_RxCocoa" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="u0r-73-XfR">
+                <tableViewController restorationIdentifier="SwitchViewController" storyboardIdentifier="SwitchViewController" id="jrk-H3-q9e" customClass="SwitchViewController" customModule="Sample_RxCocoa" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="19" sectionFooterHeight="18" id="iWI-pH-iqw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <viewLayoutGuide key="safeArea" id="HiZ-LL-NVs"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HDk-Hk-rJk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="separatorColor" red="0.87045923219999999" green="0.87045923219999999" blue="0.87045923219999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <sections>
+                            <tableViewSection id="16h-JZ-2ga">
+                                <string key="headerTitle">Section-1 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAa</string>
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="50" id="3kv-vg-A6v">
+                                        <rect key="frame" x="0.0" y="145.5" width="375" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3kv-vg-A6v" id="DSO-OF-8Qv">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="49.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CRC-IY-a6Z">
+                                                    <rect key="frame" x="296" y="10" width="51" height="31"/>
+                                                </switch>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="CRC-IY-a6Z" secondAttribute="trailing" constant="30" id="UmH-xa-SnO"/>
+                                                <constraint firstItem="CRC-IY-a6Z" firstAttribute="centerY" secondItem="DSO-OF-8Qv" secondAttribute="centerY" id="bq4-sU-C6r"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection id="qm7-qP-CEJ">
+                                <string key="headerTitle">Section-2 BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB</string>
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Lh6-9Y-iRB">
+                                        <rect key="frame" x="0.0" y="341.5" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Lh6-9Y-iRB" id="m2x-LE-LC2">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mq7-2X-RcK">
+                                                    <rect key="frame" x="296" y="6" width="51" height="31"/>
+                                                </switch>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="mq7-2X-RcK" secondAttribute="trailing" constant="30" id="A8n-J3-wrt"/>
+                                                <constraint firstItem="mq7-2X-RcK" firstAttribute="centerY" secondItem="m2x-LE-LC2" secondAttribute="centerY" id="O4p-jS-WfC"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="QbP-mj-RHV">
+                                        <rect key="frame" x="0.0" y="385.5" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QbP-mj-RHV" id="Ipy-gb-reS">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rhH-3e-6yP">
+                                                    <rect key="frame" x="296" y="6.5" width="51" height="31"/>
+                                                </switch>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="rhH-3e-6yP" firstAttribute="centerY" secondItem="Ipy-gb-reS" secondAttribute="centerY" id="CWk-oQ-ZTa"/>
+                                                <constraint firstAttribute="trailing" secondItem="rhH-3e-6yP" secondAttribute="trailing" constant="30" id="jE0-bg-e08"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="jrk-H3-q9e" id="Qql-LJ-hWW"/>
+                            <outlet property="delegate" destination="jrk-H3-q9e" id="LqY-yL-ssG"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="firstSwitch" destination="CRC-IY-a6Z" id="9yJ-0d-FPo"/>
+                        <outlet property="secondSwitch" destination="mq7-2X-RcK" id="sdC-cy-leA"/>
+                        <outlet property="thirdSwitch" destination="rhH-3e-6yP" id="Oqb-I4-q6L"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hcY-bI-84v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2346" y="-135"/>
+            <point key="canvasLocation" x="2338" y="-135"/>
         </scene>
         <!--Slider View Controller-->
         <scene sceneID="eRb-Kf-r1y">

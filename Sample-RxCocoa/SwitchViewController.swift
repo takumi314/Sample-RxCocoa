@@ -8,6 +8,20 @@
 
 import UIKit
 
-class SwitchViewController: UIViewController {
+class SwitchViewController: UITableViewController {
+
+    @IBOutlet weak var firstSwitch: UISwitch!
+    @IBOutlet weak var secondSwitch: UISwitch!
+    @IBOutlet weak var thirdSwitch: UISwitch!
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+
+    func setupUI() -> Void {
+
+    }
 
 }
+
+
