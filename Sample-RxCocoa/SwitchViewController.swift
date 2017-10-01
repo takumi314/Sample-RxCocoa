@@ -10,13 +10,21 @@ import UIKit
 import RxSwift
 import RxCocoa
 
+struct SwitchPersistableKey {
+    let first  = "first"
+    let second = "second"
+    let third  = "third"
+}
 
 class SwitchViewController: UITableViewController {
 
-    @IBOutlet weak var firstSwitch: UISwitch!
-    @IBOutlet weak var secondSwitch: UISwitch!
-    @IBOutlet weak var thirdSwitch: UISwitch!
+    @IBOutlet private weak var firstSwitch: UISwitch!
+    @IBOutlet private weak var secondSwitch: UISwitch!
+    @IBOutlet private weak var thirdSwitch: UISwitch!
+
     private let disposeBag = DisposeBag()
+    private let userDefault = UserDefaults()
+    private let key = SwitchPersistableKey()
 
     // MARK: - Life cycle
 
@@ -28,6 +36,9 @@ class SwitchViewController: UITableViewController {
     }
 
     private func setupUI() -> Void {
+        firstSwitch.isOn    = userDefault.bool(forKey: key.first)
+        secondSwitch.isOn   = userDefault.bool(forKey: key.second)
+        thirdSwitch.isOn    = userDefault.bool(forKey: key.third)
     }
 
     private func setupRx() -> Void {
@@ -35,6 +46,14 @@ class SwitchViewController: UITableViewController {
             .isOn
             .subscribe { [unowned self] on in
                 print(on)
+                if let on = on.element, on {
+                    self.unlockSwitch()
+                } else {
+                    self.secondSwitch.isOn = false
+                    self.thirdSwitch.isOn = false
+                    self.lockSwitch()
+                }
+                self.persistAll()
             }.addDisposableTo(disposeBag)
 
         secondSwitch.rx
@@ -44,6 +63,9 @@ class SwitchViewController: UITableViewController {
             }
             .subscribe { [unowned self] on in
                 print(on)
+                if let on = on.element {
+                    self.userDefault.set(on, forKey: self.key.second)
+                }
             }
             .addDisposableTo(disposeBag)
 
@@ -54,9 +76,28 @@ class SwitchViewController: UITableViewController {
             }
             .subscribe { [unowned self] on in
                 print(on)
+                if let on =  on.element {
+                    self.userDefault.set(on, forKey: self.key.third)
+                }
             }
             .addDisposableTo(disposeBag)
+    }
 
+    private func unlockSwitch() -> Void {
+        firstSwitch.isEnabled   = true
+        secondSwitch.isEnabled  = true
+        thirdSwitch.isEnabled   = true
+    }
+
+    private func lockSwitch() -> Void {
+        secondSwitch.isEnabled   = false
+        thirdSwitch.isEnabled    = false
+    }
+
+    private func persistAll() -> Void {
+        userDefault.set(firstSwitch.isOn, forKey: key.first)
+        userDefault.set(secondSwitch.isOn, forKey: key.second)
+        userDefault.set(thirdSwitch.isOn, forKey: key.third)
     }
 
 }
