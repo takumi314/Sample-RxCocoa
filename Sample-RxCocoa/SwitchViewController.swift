@@ -7,18 +7,30 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
+
 
 class SwitchViewController: UITableViewController {
 
     @IBOutlet weak var firstSwitch: UISwitch!
     @IBOutlet weak var secondSwitch: UISwitch!
     @IBOutlet weak var thirdSwitch: UISwitch!
+    private let disposeBag = DisposeBag()
+
+    // MARK: - Life cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        // 初期設定
+        setupUI()
+        setupRx()
     }
 
-    func setupUI() -> Void {
+    private func setupUI() -> Void {
+    }
+
+    private func setupRx() -> Void {
 
     }
 
