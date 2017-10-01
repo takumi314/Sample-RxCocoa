@@ -31,6 +31,31 @@ class SwitchViewController: UITableViewController {
     }
 
     private func setupRx() -> Void {
+        firstSwitch.rx
+            .isOn
+            .subscribe { [unowned self] on in
+                print(on)
+            }.addDisposableTo(disposeBag)
+
+        secondSwitch.rx
+            .isOn
+            .filter { [unowned self] _ in
+                return self.firstSwitch.isOn
+            }
+            .subscribe { [unowned self] on in
+                print(on)
+            }
+            .addDisposableTo(disposeBag)
+
+        thirdSwitch.rx
+            .isOn
+            .filter { [unowned self] _ in
+                return self.firstSwitch.isOn
+            }
+            .subscribe { [unowned self] on in
+                print(on)
+            }
+            .addDisposableTo(disposeBag)
 
     }
 
