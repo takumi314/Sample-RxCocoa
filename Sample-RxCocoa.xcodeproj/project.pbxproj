@@ -122,11 +122,11 @@
 				E1AF0DCB1F78223600A3BCCB /* SliderViewController.swift */,
 				E1E6467D1F7935D500C0D64A /* CollectionViewController.swift */,
 				E19F30831F795D4F002AE684 /* TextFieldViewController.swift */,
+				E1296FF81F83F528002E1A3A /* PanGestureViewController.swift */,
 				E1AF321C1F778E2400DFE0C2 /* Main.storyboard */,
 				E1AF321F1F778E2400DFE0C2 /* Assets.xcassets */,
 				E1AF32211F778E2400DFE0C2 /* LaunchScreen.storyboard */,
 				E1AF32241F778E2400DFE0C2 /* Info.plist */,
-				E1296FF81F83F528002E1A3A /* PanGestureViewController.swift */,
 			);
 			path = "Sample-RxCocoa";
 			sourceTree = "<group>";
