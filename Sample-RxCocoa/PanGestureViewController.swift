@@ -37,7 +37,9 @@ class PanGestureViewController: UIViewController {
 
     func didMove(_ gesture: UIPanGestureRecognizer) -> Void {
         let next = gesture.location(in: view)
-        circleView.center = next
+        UIView.animate(withDuration: 0.1) { [unowned self] in
+            self.circleView.center = next
+        }
     }
 
 }
