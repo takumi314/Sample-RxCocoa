@@ -9,7 +9,6 @@
 import UIKit
 import RxSwift
 import RxCocoa
-import ChameleonFramework
 
 class MainViewController: UIViewController {
 
