@@ -26,6 +26,18 @@ class PanGestureViewController: UIViewController {
         circleView.center = view.center
         circleView.backgroundColor = .green
         view.addSubview(circleView)
+
+        setupPanGesture()
+    }
+
+    func setupPanGesture() -> Void {
+        let gesture = UIPanGestureRecognizer(target: self, action: #selector(PanGestureViewController.didMove(_:)))
+        circleView.addGestureRecognizer(gesture)
+    }
+
+    func didMove(_ gesture: UIPanGestureRecognizer) -> Void {
+        let next = gesture.location(in: view)
+        circleView.center = next
     }
 
 }
