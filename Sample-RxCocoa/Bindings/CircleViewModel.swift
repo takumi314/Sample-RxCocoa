@@ -13,7 +13,7 @@ import ChameleonFramework
 
 class CircleViewModel {
 
-    var centerVariable = Variable<CGPoint>(.zero)   // Create one variable that will be changed and observed
+    var centerVariable = Variable<CGPoint?>(.zero)   // Create one variable that will be changed and observed
     var backgroundColor: Observable<UIColor>!       // Create observable that will change backgroundColor based on center
 
     init() {
@@ -25,7 +25,8 @@ class CircleViewModel {
         backgroundColor = centerVariable
             .asObservable()
             .map { center in
-                let red: CGFloat = (center.x + center.y).truncatingRemainder(dividingBy: 255.0) / 255.0 // We just manipulate red, but you can do w/e
+                // To clculation is within this closure.
+                let red: CGFloat = (center!.x + center!.y).truncatingRemainder(dividingBy: 255.0) / 255.0
                 let green: CGFloat = 0.0
                 let blue: CGFloat = 0.0
 

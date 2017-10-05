@@ -8,16 +8,20 @@
 
 import Foundation
 import UIKit
+import RxSwift
+import RxCocoa
 
 class PanGestureViewController: UIViewController {
 
     var circleView: UIView!
+    let disposeBag = DisposeBag()
 
     // MARK: - Life cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        setupRx()
     }
 
     func setupUI() -> Void {
@@ -40,6 +44,32 @@ class PanGestureViewController: UIViewController {
         UIView.animate(withDuration: 0.1) { [unowned self] in
             self.circleView.center = next
         }
+    }
+
+    func setupRx() -> Void {
+        let circleViewModel = CircleViewModel()
+
+        circleView.rx
+            .observe(CGPoint.self, "center")
+            .bind(to: circleViewModel.centerVariable)
+            .addDisposableTo(disposeBag)
+
+        circleViewModel.backgroundColor
+            .subscribe { [weak self] backgroundColor in
+                guard let `self` = self, let color = backgroundColor.element else {
+                    return
+                }
+                UIView.animate(withDuration: 0.3) {
+                    self.circleView.backgroundColor = color
+
+                    // To get complementary color for given background color
+                    let viewBackgroundColor = UIColor(complementaryFlatColorOf: color)
+
+                    if viewBackgroundColor != color {
+                        self.view.backgroundColor = viewBackgroundColor
+                    }
+                }
+            }.addDisposableTo(disposeBag)
     }
 
 }
