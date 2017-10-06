@@ -142,6 +142,21 @@
             </objects>
             <point key="canvasLocation" x="2338" y="-135"/>
         </scene>
+        <!--Pan Gesture View Controller-->
+        <scene sceneID="027-VZ-l32">
+            <objects>
+                <viewController restorationIdentifier="PanGestureViewController" storyboardIdentifier="PanGestureViewController" id="L2M-gf-pLk" customClass="PanGestureViewController" customModule="Sample_RxCocoa" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xZf-G7-ViU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="lgl-ZF-n2E"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0vN-2r-J4o" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3232" y="-122"/>
+        </scene>
         <!--Slider View Controller-->
         <scene sceneID="eRb-Kf-r1y">
             <objects>

@@ -6,6 +6,7 @@ target 'Sample-RxCocoa' do
   use_frameworks!
    pod 'RxSwift', '~>3.6.1'  
    pod 'RxCocoa', '~>3.6.1'
+   pod 'ChameleonFramework/Swift', :git => 'https://github.com/ViccAlexander/Chameleon.git'
 
   target 'Sample-RxCocoaTests' do
     inherit! :search_paths

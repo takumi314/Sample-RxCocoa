@@ -17,7 +17,8 @@ class MainViewController: UIViewController {
                                    SearchBarViewController.identifier(),
                                    SliderViewController.identifier(),
                                    CollectionViewController.identifier(),
-                                   TextFieldViewController.identifier()]
+                                   TextFieldViewController.identifier(),
+                                   PanGestureViewController.identifier()]
     fileprivate let disposeBag = DisposeBag()
 
     fileprivate var tableView: UITableView?
